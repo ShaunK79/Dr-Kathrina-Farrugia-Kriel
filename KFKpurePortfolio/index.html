@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Back to Top Button</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 2000px; /* Just for scrollable content */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: #558985;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      display: none; /* Hidden initially */
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    #backToTop:hover {
+      background: #558985;
+      transform: scale(1.1);
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Back to Top Button -->
+<button id="backToTop" onclick="scrollToTop()">⬆</button>
+
+<script>
+  // Show button after scrolling down 100px
+  window.onscroll = () => {
+    const button = document.getElementById("backToTop");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      button.style.display = "flex";
+    } else {
+      button.style.display = "none";
+    }
+  };
+
+  // Smooth scroll back to top
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+</script>
+
+</body>
+</html>
