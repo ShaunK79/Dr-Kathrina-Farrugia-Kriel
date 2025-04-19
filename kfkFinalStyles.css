@@ -1,0 +1,720 @@
+/* google fonts embedded code  */
+
+.lato-light {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+html,
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #212529;
+    text-align: start;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    display: block;
+    letter-spacing: 1px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+/* navbar styling */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1030;
+    transition: background-color 0.3s ease;
+}
+
+/* Transparent navbar initially */
+.navbar.transparent {
+    background-color: transparent;
+}
+
+/* Solid navbar on scroll */
+.navbar.solid {
+    background-color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation container styling */
+.nav-container {
+    font-family: "Lato", sans-serif;
+    height: 58px;
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+/* Navigation links */
+.nav-links {
+    font-family: "Lato", sans-serif;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+
+    margin: 0 15px;
+}
+
+.nav-links a {
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    cursor: pointer;
+    background-color: #AA6E90;
+    border-radius: 5px;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    font-family: "Lato", sans-serif;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    background-color: #fff;
+    height: 4px;
+    width: 30px;
+    margin: 5px 0;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+/* Mobile menu */
+.mobile-menu {
+
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    background: #333;
+    z-index: 999;
+}
+
+.mobile-menu a {
+    font-family: "Lato", sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid #444;
+}
+
+.mobile-menu a:hover {
+    background: #AA6E90;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* to hide original menu */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+}
+
+/* main head */
+
+.content-center {
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    display: flex;
+    /* additional new*/
+    position: relative;
+    z-index: 2;
+    /* ensure the text is above the slideshow */
+}
+
+.mainHead {
+
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 55rem;
+    padding: 15rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 1.0) 15%, rgba(0, 0, 0, 1.0) 100%);
+    /*, url(images/PoutitineEditedPhoto.jpeg)*/
+    overflow: hidden;
+    /* prevent overflow from slideshow images */
+
+}
+
+.slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #333;
+    animation: fade 12s ease-in infinite alternate;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* defininig the images in the slideshow */
+.slideshow {
+    animation: slide 12s ease-in infinite alternate;
+}
+
+@keyframes slide {
+    0% {
+        background-image: url('images/PoutitineEditedPhoto.jpeg');
+    }
+
+    50% {
+        background-image: url('images/studio-teaching.jpg');
+    }
+
+    100% {
+        background-image: url('images/Teaching_in_the_1950s_7.jpg');
+    }
+}
+
+.mainText {
+    text-align: center !important;
+    color: #fff;
+}
+
+.mainH1 {
+    font-family: "Lato", sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.2;
+    letter-spacing: clamp(0.2rem, 0.5vw, 0.9rem);
+    text-transform: uppercase;
+    background: linear-gradient(rgba(255, 255, 255, 1.0), rgba(255, 255, 255, 0.3));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.mainH2 {
+    font-family: "Lato", sans-serif;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 1);
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+    .mainH1 {
+        font-size: 3rem;
+        letter-spacing: 0.6rem;
+    }
+
+    .mainH2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainH1 {
+        font-size: 2.5rem;
+        letter-spacing: 0.4rem;
+    }
+
+    .mainH2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .mainH1 {
+        font-size: 2rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .mainH2 {
+        font-size: 1rem;
+    }
+}
+
+/* ABOUT ME */
+
+.aboutMe {
+    padding: 1rem;
+    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+    color: #fff;
+}
+
+/* image - book signing */
+.booksign {
+    width: 100%;
+    max-width: 40%;
+    height: auto;
+}
+
+/* PUBLICATIONS */
+
+#publications {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.pubHead {
+    text-align: center;
+}
+
+.books-item {
+    position: relative;
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.row::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 800px) {
+    .books-item {
+        width: 100%;
+    }
+}
+
+.booksH2 {
+    text-align: center;
+    color: #000;
+}
+
+.books-info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: #8E4870;
+}
+
+.bookHead p {
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.books-item:hover .books-info {
+    opacity: 1;
+    overflow: auto;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* links to external html pages */
+.external-html {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* chapters */
+
+#chapters {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.chapters-item {
+    /* position: relative; */
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    background-color: #8E4870;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.chapters-item:hover {
+    background-color: #AA6E90;
+}
+
+.chapters-link {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* articles */
+
+#articles {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
+
+.articles-item {
+    /* position: relative; */
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    background-color: #8E4870;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.articles-item:hover {
+    background-color: #AA6E90;
+}
+
+.articles-link {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#reviews {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+
+}
+
+.reviews-container {
+    width: 100%;
+}
+
+.review {
+    float: left;
+    width: 23.5%;
+    background-color: #8E4870;
+    height: 150px;
+    padding: 5px;
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 3px;
+
+}
+
+.reviews-container::after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+@media screen and (max-width: 900px) {
+    .review {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .review {
+        width: 100%;
+    }
+}
+
+.review:hover {
+    background-color: #AA6E90;
+}
+
+
+
+.review-link {
+    text-decoration: none;
+    color: #fff;
+    font-style: italic;
+}
+
+/* CONTACT section */
+.contact {
+    background-color: #4d4d4d;
+    color: #fff;
+    padding: 1rem;
+}
+
+/* SOCIAL MEDIA and CONTACT */
+
+.fa {
+    font-size: 30px;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.fa-instagram {
+    color: #8E4870;
+    background-color: #fff;
+    font-size: 30px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.fa-linkedin {
+    color: #8E4870;
+    background-color: #fff;
+    font-size: 30px;
+}
+
+.socialmedia-contact {
+    color: #000;
+    background-color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    height: 150px;
+    width: 100%;
+    align-items: center;
+}
+
+.email-contact {
+    color: #000;
+    background-color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    height: 150px;
+    width: 100%;
+    align-items: center;
+}
+
+.email-contact a {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+hr {
+    background-color: #8E4870;
+    padding-top: 2px;
+    height: 3px;
+    width: 3rem;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    background: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer h5,
+footer h6 {
+    margin: 10px 0;
+    line-height: 1.3;
+}
+
+/*  adjustment for smaller screens */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px;
+    }
+
+    footer h5 {
+        font-size: 1rem;
+    }
+
+    footer h6 {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+}
+
+/*  smaller screens - mobiles */
+@media (max-width: 480px) {
+    footer {
+        padding: 10px;
+    }
+
+    footer h5 {
+        font-size: 0.9rem;
+    }
+
+    footer h6 {
+        font-size: 0.8rem;
+        line-height: 1.2;
+    }
+}
+
+/* -----------------EXTERNAL FILES-------------------- */
+
+#books-external {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    background-color: #fff;
+    color: #4d4d4d;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+.books-h2-external {
+    background-color: #8E4870;
+    color: #fff;
+    padding: 15px;
+
+}
+
+.nameHead {
+    padding-left: 2rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.button-external {
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #8E4870;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+/* research section */
+#research {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    background-color: #4d4d4d;
+    color: #fff;
+}
+
+.research-link,
+.podcast-link {
+    text-decoration: none;
+    color: #CDA1B9;
+}
+
+.research-link h4:hover {
+    background-color: #AA6E90;
+    color: #fff;
+}
+
+.podcast-link h4:hover {
+    background-color: #AA6E90;
+    color: #fff;
+}
+
+/* underline text */
+.pubHead,
+.subBooks {
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color: #8E4870;
+
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #8E4870;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    z-index: 9999;
+    transition: 0.3s, transform 0.3s, background 0.3s;
+    -webkit-transition: opacity 0.3s, transform 0.3s, background 0.3s;
+    /* safari */
+    -moz-transition: opacity 0.3s, transform 0.3s, background 0.3s;
+    /* firefox */
+}
+
+#backToTop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+#backToTop:hover,
+#backToTop:active {
+    background: #AA6E90;
+    transform: scale(1.1);
+}
+
+@media (hover: none) {
+    #backToTop {
+        background: #8E4870 !important;
+    }
+}
