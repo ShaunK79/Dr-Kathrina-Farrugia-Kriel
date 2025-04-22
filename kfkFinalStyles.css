@@ -9,13 +9,14 @@
 * {
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
+
 }
 
 html,
 body {
     font-family: "Lato", sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 24px;
     color: #212529;
     text-align: start;
@@ -79,7 +80,7 @@ body {
     color: #fff;
     font-size: 16px;
     transition: color 0.3s;
-    font-weight: 500;
+    font-weight: 350;
 }
 
 .nav-links a:hover {
@@ -273,6 +274,15 @@ body {
     padding: 1rem;
     background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
     color: #fff;
+    font-weight: 300;
+}
+
+.text-decoration {
+    font-weight: 500;
+}
+
+.aboutMe strong {
+    font-weight: 600;
 }
 
 /* image - book signing */
@@ -326,6 +336,7 @@ img {
 .booksH2 {
     text-align: center;
     color: #000;
+
 }
 
 .books-info {
@@ -338,6 +349,13 @@ img {
     width: 100%;
     opacity: 0;
     background-color: #8E4870;
+    font-weight: 300;
+}
+
+.bookHead {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+
 }
 
 .bookHead p {
@@ -351,6 +369,7 @@ img {
     transform: translate(-50%, -50%);
     text-align: center;
 
+
 }
 
 .books-item:hover .books-info {
@@ -359,6 +378,7 @@ img {
     color: #fff;
     padding: 5px;
     border-radius: 3px;
+
 }
 
 /* links to external html pages */
@@ -429,6 +449,27 @@ img {
     color: #fff;
     cursor: pointer;
 }
+
+/* Research and Knoweledge */
+
+#research {
+    font-family: "Lato", sans-serif;
+
+}
+
+.subBooks,
+.pubHead {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+.research-link h4,
+.podcast-link h4,
+.research-nolink {
+    font-weight: 300;
+}
+
+/* Reviews */
 
 #reviews {
     padding-left: 1rem;
