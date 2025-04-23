@@ -313,7 +313,14 @@ body {
 
 }
 
-img {
+.books-item a.book-link {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}
+
+.books-item img {
     display: block;
     width: 100%;
     height: auto;
@@ -350,14 +357,40 @@ img {
     opacity: 0;
     background-color: #8E4870;
     font-weight: 300;
+    transition: opacity 0.3s ease;
+    /* Smooth transition */
+    padding: 5px;
+    border-radius: 3px;
+    color: #fff;
+    overflow: auto;
 }
 
 .bookHead {
     font-family: "Lato", sans-serif;
     font-weight: bold;
+    color: #fff;
 
 }
 
+.books-info p {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Make hover effect consistent */
+.book-link:hover .books-info {
+    opacity: 1;
+}
+
+/* Style the link icon */
+.details-link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+}
+
+/* 
 .bookHead p {
     color: #fff;
     font-size: 14px;
@@ -379,7 +412,7 @@ img {
     padding: 5px;
     border-radius: 3px;
 
-}
+} */
 
 /* links to external html pages */
 .external-html {
