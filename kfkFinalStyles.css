@@ -732,13 +732,24 @@ footer h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 24px;
     z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    /* ensure cross browser compatibility */
     transition: 0.3s, transform 0.3s, background 0.3s;
     -webkit-transition: opacity 0.3s, transform 0.3s, background 0.3s;
     /* safari */
     -moz-transition: opacity 0.3s, transform 0.3s, background 0.3s;
     /* firefox */
+    -ms-transition: opacity 0.3s, transform 0.3s, background 0.3s;
+    /* IE */
+    -o-transition: opacity 0.3s, transform 0.3s, background 0.3s;
+    /* Opera */
+    /* iOS specific fixes */
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 #backToTop.show {
@@ -752,10 +763,17 @@ footer h6 {
 #backToTop:active {
     background: #AA6E90;
     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    /* Safari */
 }
 
+/* mobile support */
 @media (hover: none) {
     #backToTop {
         background: #8E4870 !important;
+        /* enlarge button for touch devices */
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
     }
 }
