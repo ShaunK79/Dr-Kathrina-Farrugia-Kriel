@@ -310,14 +310,14 @@ body {
     float: left;
     width: 33.33%;
     padding: 5px;
-
 }
 
-.books-item a.book-link {
+.external-html {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
     display: block;
     position: relative;
-    text-decoration: none;
-    color: inherit;
 }
 
 .books-item img {
@@ -343,7 +343,6 @@ body {
 .booksH2 {
     text-align: center;
     color: #000;
-
 }
 
 .books-info {
@@ -369,7 +368,6 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: bold;
     color: #fff;
-
 }
 
 .books-info p {
@@ -377,8 +375,9 @@ body {
     font-size: 14px;
 }
 
-/* Make hover effect consistent */
-.book-link:hover .books-info {
+/* Fix the hover effect to target the correct parent-child relationship */
+.books-item:hover .books-info,
+.external-html:hover .books-info {
     opacity: 1;
 }
 
@@ -388,37 +387,6 @@ body {
     bottom: 10px;
     right: 10px;
     font-size: 20px;
-}
-
-/* 
-.bookHead p {
-    color: #fff;
-    font-size: 14px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-
-
-}
-
-.books-item:hover .books-info {
-    opacity: 1;
-    overflow: auto;
-    color: #fff;
-    padding: 5px;
-    border-radius: 3px;
-
-} */
-
-/* links to external html pages */
-.external-html {
-    cursor: pointer;
-    text-decoration: none;
-    color: #fff;
 }
 
 /* chapters */
